@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './componentes/NavBar';
 
 function App() {
+
+  let userColor = "green";
+  const styles = {marginTop:"20px", color: userColor};
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprender React¡
-        </a>
-      </header>
+    <div>
+      <h1 className="titulo">Resort "Altos de Simic"</h1>
+      <NavBar/>
+        <p style={styles}>El mejor lugar para sus vacaciones</p>
+        <button onClick={ ()=> alert("Su reserva fue realizada")}>Reserve</button>
     </div>
   );
-}
 
+  }
 export default App;
