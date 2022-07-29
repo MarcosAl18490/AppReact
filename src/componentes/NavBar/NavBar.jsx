@@ -1,3 +1,4 @@
+import Widget from "../CardWidget/CardWidget";
 import "./NavBar.css";
 
 function NavBar(){
@@ -8,6 +9,7 @@ function NavBar(){
             <a href="http://"><li>Habitaciones</li></a>
             <a href="http://"><li>Servicios</li></a>
             <a href="http://"><li>Contacto</li></a>
+            <Widget/>
         </ul>
     )
 }
