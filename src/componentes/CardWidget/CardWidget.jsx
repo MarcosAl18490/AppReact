@@ -1,6 +1,8 @@
+import "./CardWidget.css"
+
 function Widget() {
     return (
-      <img src="..../public/imagenes/carrito.png" alt="Carrito" />
+      <img className="carrito" src="imagenes/carrito.png" alt="Carrito" />
     )
   }
   

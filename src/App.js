@@ -4,6 +4,7 @@ import Card from './componentes/Card/Card';
 import Boton from './componentes/Boton/Boton';
 import BotonChildren from './componentes/Boton/BotonChildren';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemCount from './componentes/ItemCount/ItemCount';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     <div>
       <h1 className="titulo">Resort "Altos de Simic"</h1>
       <NavBar/>
+      <ItemCount initial={1} stock={5} />
       <ItemListContainer text="Habitaciones" />
       <Card info={infoHabitacion[0]}/>
       <Card info={infoHabitacion[1]}/>
@@ -40,7 +42,7 @@ function App() {
         <Boton text="Apretar aqui"/>
         <BotonChildren type="alert">
           Borrar reserva
-        </BotonChildren>
+        </BotonChildren>  
 
     </div>
   );
