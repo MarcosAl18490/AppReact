@@ -1,17 +1,17 @@
 import Boton from "../Boton/Boton";
-import "./Card.css"
+import "./Item.css"
 
-function Card( props ) {
+function Item( props ) {
 
 console.log(props.info)
 
     return(
         <div className="main">
-            <div className="card">
-                <div className="card-img">
+            <div className="item">
+                <div className="item-img">
                     <img src={props.info.imagen} alt="imagen de habitacion doble" />
                 </div>
-                <div className="card-info">
+                <div className="item-info">
                     <h2>{props.info.nombre}</h2>
                     <p> {props.info.precio}  </p>
                     <h3>{props.info.descripcion}</h3>
@@ -22,4 +22,4 @@ console.log(props.info)
     )
 }
 
-export default Card;
+export default Item;

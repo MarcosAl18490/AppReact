@@ -1,8 +1,30 @@
+import React, {useEffect, useState } from "react";
+import ItemList from '././Itemlist/ItemList.js';
+ 
+function getProductos(){
+  return new Promise ((resolve) => {
+    setTimeout(() => resolve (ItemList), 3000);
+  })
+};
 
-function ItemListContainer({text}) {
+export default function ItemListContainer([]) {
+ 
+ 
+  const[data, setData] = useState();
+
+  useEffect(() => {
+    getProductos().then((respuesta)=> {
+      setData(respuesta);
+    }); 
+  }, [])
+
   return (
-    <h1>{text}</h1>
-  )
+    <div> 
+      <h1>Item List</h1>
+      <p>{data.nombre}</p>
+      <p>{data.capacidad}</p>
+    </div>
+  );
 }
 
-export default ItemListContainer;
+
