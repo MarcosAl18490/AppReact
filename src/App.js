@@ -1,9 +1,8 @@
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
-import Card from './componentes/Item/Item';
 import Boton from './componentes/Boton/Boton';
 import BotonChildren from './componentes/Boton/BotonChildren';
-// import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemCount from './componentes/ItemCount/ItemCount';
 
 
@@ -18,7 +17,8 @@ function App() {
       <h1 className="titulo">Resort "Altos de Simic"</h1>
       <NavBar/>
       <ItemCount initial={1} stock={5} />
-      {/* <ItemListContainer/> */}
+  
+      <ItemListContainer/>
       <br />
         <p style={styles}>El mejor lugar para sus vacaciones</p>
         
