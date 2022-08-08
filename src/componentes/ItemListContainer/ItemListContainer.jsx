@@ -21,14 +21,18 @@ export default function ItemListContainer(){
 
   return(
     <div>
-      <Item 
-            id={data.id} 
-            nombre={data.nombre} 
-            precio={data.precio} 
-            capacidad={data.capacidad} 
-            imagen={data.imagen} 
-            descripcion={data.descripcion}
-      />
+      <h1>Habitaciones</h1>
+        {
+          data.map((tipoHabitacion) => <Item 
+                                      key={tipoHabitacion.id} 
+                                      nombre={tipoHabitacion.nombre} 
+                                      precio={tipoHabitacion.precio} 
+                                      capacidad={tipoHabitacion.capacidad} 
+                                      imagen={tipoHabitacion.imagen} 
+                                      descripcion={tipoHabitacion.descripcion}
+                                      />
+          )
+        }
     </div>
   ) 
 }
