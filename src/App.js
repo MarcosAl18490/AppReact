@@ -4,6 +4,7 @@ import Boton from './componentes/Boton/Boton';
 import BotonChildren from './componentes/Boton/BotonChildren';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemCount from './componentes/ItemCount/ItemCount';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       <ItemListContainer/>
       <br />
         <p style={styles}>El mejor lugar para sus vacaciones</p>
+      <br />
+      <ItemDetailContainer/>
         
         <Boton text="Apretar aqui"/>
         <BotonChildren type="alert">
