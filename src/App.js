@@ -5,6 +5,7 @@ import BotonChildren from './componentes/Boton/BotonChildren';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemCount from './componentes/ItemCount/ItemCount';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -15,21 +16,25 @@ function App() {
  
   return (
     <div>
-      <h1 className="titulo">Resort "Altos de Simic"</h1>
-      <NavBar/>
-      <ItemCount initial={1} stock={5} />
-  
-      <ItemListContainer/>
-      <br />
-        <p style={styles}>El mejor lugar para sus vacaciones</p>
-      <br />
-      <ItemDetailContainer/>
+    <BrowserRouter>
+          <h1 className="titulo">Resort "Altos de Simic"</h1>
+          <NavBar/>
+          <ItemCount initial={1} stock={5} />
+          <p style={styles}>El mejor lugar para sus vacaciones</p>
+
+      <Routes>
         
+        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/Detalle' element={<ItemDetailContainer/>}/>
+        
+      </Routes>
+
         <Boton text="Apretar aqui"/>
         <BotonChildren type="alert">
-          Borrar reserva
-        </BotonChildren>  
+            Borrar reserva
+        </BotonChildren>
 
+      </BrowserRouter>
     </div>
   );
 
