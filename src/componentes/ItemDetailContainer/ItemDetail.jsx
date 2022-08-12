@@ -1,8 +1,9 @@
-import Boton from "../Boton/Boton";
+
 import "./ItemDetail.css"
+import  { Link } from "react-router-dom"
 
 
-function ItemDetail( {id , nombre, precio, capacidad, imagen, descripcion} ) {
+function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion} ) {
 
 
     return(
@@ -13,11 +14,11 @@ function ItemDetail( {id , nombre, precio, capacidad, imagen, descripcion} ) {
                 </div>
                 <div className="item-info">
                     <h2>{id}</h2>
-                    <h3>{nombre}</h3>
+                    <h3>{categoria}</h3>
                     <p> {precio}  </p>
                     <p>{capacidad}</p>
                     <h3>{descripcion}</h3>
-                    <Boton text={"ver mas"}></Boton>
+                    <Link to={`/detalle/${id}`}>Ver mas</Link>
                 </div>
             </div>
         </div>

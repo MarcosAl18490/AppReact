@@ -25,8 +25,11 @@ function App() {
       <Routes>
         
         <Route path='/' element={<ItemListContainer/>}/>
-        <Route path='/Detalle' element={<ItemDetailContainer/>}/>
         
+        <Route path='/categoria/:categoria' element={<ItemListContainer/>}/>
+
+        <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
+
       </Routes>
 
         <Boton text="Apretar aqui"/>

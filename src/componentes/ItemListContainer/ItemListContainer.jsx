@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react";
 import ItemList from "../ItemListContainer/ItemList.js";
 import Item from "../Item/Item.jsx";
+import { useParams } from "react-router-dom";
 
 
 function getProductos(){
   return new Promise((resolve) => {
-    setTimeout(() => resolve(ItemList),2000)
+    setTimeout(() => resolve(ItemList),1500)
   })
 };
 
@@ -13,8 +14,15 @@ export default function ItemListContainer(){
 
   const [data, setData] = useState([]); 
 
+  const idCategoria = useParams().idCategoria
+
     useEffect(() => {
-         getProductos().then((respuesta) => {
+         getProductos()
+         .then((respuesta) => {
+
+          if(idCategoria === undefined) setData(respuesta)
+
+         respuesta.filter(elemento => elemento.categoria === idCategoria )
          setData(respuesta);
         });
       }, []);
@@ -25,7 +33,8 @@ export default function ItemListContainer(){
         {
           data.map((tipoHabitacion) => <Item 
                                       key={tipoHabitacion.id} 
-                                      nombre={tipoHabitacion.nombre} 
+                                      id={tipoHabitacion.id} 
+                                      categoria={tipoHabitacion.categoria} 
                                       precio={tipoHabitacion.precio} 
                                       capacidad={tipoHabitacion.capacidad} 
                                       imagen={tipoHabitacion.imagen} 

@@ -1,29 +1,37 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from '../ItemListContainer/ItemList'
 import ItemDetail from './ItemDetail'
+import {useParams} from "react-router-dom"
+
+export default function ItemDetailContainer({itemid}) {
+
+const [producto, setProducto] = useState({}); 
+
+const idURL = useParams().id;
 
 function getHabitacion(){
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(ItemList[0]),2000)
-    })
-  };
+  return new Promise((resolve,reject) => {
+    let itemRequerido = ItemList.find (elemento => elemento.id == idURL );
+
+    if(itemRequerido === undefined)
+      reject("Item no encontrado")
+    else
+      resolve(itemRequerido)
+  });
+}
+
   
-export default function ItemDetailContainer() {
-
-
-const [producto, setProducto] = useState([]); 
-
 useEffect(() => {
-     getHabitacion().then((respuesta) => {
-     setProducto(respuesta);
-    });
+     getHabitacion()
+     .then((respuesta) => setProducto(respuesta))
+     .catch((error) => alert(error));
   }, []);
 
 return(
 <div>
-  <h2>Habitacione seleccionada</h2>
+  <h2>Habitacion seleccionada</h2>
   <ItemDetail
-  id={producto.id} nombre={producto.nombre} precio={producto.precio} capacidad={producto.capacidad} imagen={producto.imagen} descripcion={producto.descripcion}
+  id={producto.id} categoria={producto.categoria} precio={producto.precio} capacidad={producto.capacidad} imagen={producto.imagen} descripcion={producto.descripcion}
   />
     
 </div>
