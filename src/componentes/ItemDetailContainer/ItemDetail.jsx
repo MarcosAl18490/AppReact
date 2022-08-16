@@ -1,9 +1,16 @@
 
 import "./ItemDetail.css"
 import  { Link } from "react-router-dom"
+import ItemCount from "../ItemCount/ItemCount";
 
 
-function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion} ) {
+function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, stock} ) {
+
+    const cantWidget = 0;
+
+    function handleAdd(count){
+        console.log("agregar al carrito", count)
+    }
 
 
     return(
@@ -20,9 +27,20 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion} ) 
                     <h3>{descripcion}</h3>
                     <Link to={`/detalle/${id}`}>Ver mas</Link>
                 </div>
+
+                 {cantWidget === 0?
+                <ItemCount 
+                    initial={1} 
+                    stock={6} 
+                    onAdd={handleAdd}
+                     /> 
+                     : <a>Ir al carrito</a>
+                     }
+                
+
             </div>
         </div>
     )
-}
+} 
 
 export default ItemDetail;
