@@ -1,10 +1,9 @@
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
-import Boton from './componentes/Boton/Boton';
-import BotonChildren from './componentes/Boton/BotonChildren';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cart from './componentes/Cart/Cart';
 
 
 function App() {
@@ -28,12 +27,10 @@ function App() {
 
         <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
 
+        <Route path='/cart/:idCart' element={<Cart/>}/>
+
       </Routes>
 
-        <Boton text="Apretar aqui"/>
-        <BotonChildren type="alert">
-            Borrar reserva
-        </BotonChildren>
 
       </BrowserRouter>
     </div>

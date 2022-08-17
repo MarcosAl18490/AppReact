@@ -9,8 +9,6 @@ function NavBar(){
             <ul>
             <Link to="/">Principal</Link>
             <br />
-            <Link to="/Habitaciones">Habitaciones</Link>
-            <br />
             <Link to="/Contacto">Contacto</Link>
             <br />
             <Link to="/Categoria/standar">Standar</Link>

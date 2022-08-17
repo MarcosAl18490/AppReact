@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import  { Link } from "react-router-dom"
 
 function ItemCount(props){
 
@@ -32,8 +33,8 @@ function ItemCount(props){
         <h1>Item Counter</h1>
         <button onClick={handleIncrementar}>Agregar</button>
         <button onClick={handleRestar}>Quitar</button>
-        <button onClick={handleCLick}>Finalizar reservar</button>
-        <h3>Cantidad: {count}</h3>
+        <Link to="/Cart"><button onClick={handleCLick}>Finalizar reservar</button></Link>
+        <h5>Cantidad de huespedes: {count}</h5>
         
         </>
     )
@@ -42,31 +43,3 @@ function ItemCount(props){
 export default ItemCount;
 
  
-// const [count, setCount] = useState(props.initial);
-
-// function Incrementar (){
-//     if(count<props.stock){
-//       setCount(count+1)  
-//     } else{
-//         alert("Superó el numero de huespedes permitidos")
-//     }
-// }
-
-// function Restar (){
-//     if(count>props.initial){
-//       setCount(count-1)  
-//     } else{
-//         alert("No puede haber menos de un huesped")
-//     }
-// }
-
-
-// return(
-//     <>
-//     <h1>Item Counter</h1>
-//     <button onClick={Incrementar}>Agregar</button>
-//     <button onClick={Restar}>Quitar</button>
-//     <h3>Huespedes: {count}</h3>
-//     </>
-// )
-

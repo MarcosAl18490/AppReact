@@ -25,7 +25,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, st
                     <p> {precio}  </p>
                     <p>{capacidad}</p>
                     <h3>{descripcion}</h3>
-                    <Link to={`/detalle/${id}`}>Ver mas</Link>
+                    <Link to="/">Volver al inicio</Link>
                 </div>
 
                  {cantWidget === 0?
