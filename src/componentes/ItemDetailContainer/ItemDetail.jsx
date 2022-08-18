@@ -2,14 +2,20 @@
 import "./ItemDetail.css"
 import  { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount";
+import { useContext, useState } from "react";
+import { cartContext } from "../../Store/cartContext";
 
 
 function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, stock} ) {
+    const {addToCart} = useContext(cartContext);
+    const [cantWidget, setCantWidget] = useState(0);
+    
+   
 
-    const cantWidget = 0;
-
-    function handleAdd(count){
-        console.log("agregar al carrito", count)
+    function handleAdd(quantity){
+        setCantWidget(quantity)
+        const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion, stock};
+        addToCart(itemToCart, quantity);
     }
 
 
@@ -34,7 +40,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, st
                     stock={6} 
                     onAdd={handleAdd}
                      /> 
-                     : <a>Ir al carrito</a>
+                     : <a href="/cart">Ir al carrito</a>
                      }
                 
 

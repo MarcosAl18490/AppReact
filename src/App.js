@@ -4,6 +4,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from './componentes/Cart/Cart';
+import { CartProvider } from './Store/cartContext';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
  
   return (
     <div>
-    <BrowserRouter>
+  <BrowserRouter>
+      <CartProvider>
           <h1 className="titulo">Resort "Altos de Simic"</h1>
           <NavBar/>
           <p style={styles}>El mejor lugar para sus vacaciones</p>
@@ -31,8 +33,8 @@ function App() {
 
       </Routes>
 
-
-      </BrowserRouter>
+    </CartProvider>
+  </BrowserRouter>
     </div>
   );
 

@@ -24,16 +24,13 @@ function ItemCount(props){
         
     }
 
-    const handleCLick = () => {
-        props.onAdd(count)
-    }
-
+    
     return(
         <>
         <h1>Item Counter</h1>
         <button onClick={handleIncrementar}>Agregar</button>
         <button onClick={handleRestar}>Quitar</button>
-        <Link to="/Cart"><button onClick={handleCLick}>Finalizar reservar</button></Link>
+        <Link to="/Cart"><button onClick={()=> props.onAdd(count)}>Finalizar reservar</button></Link>
         <h5>Cantidad de huespedes: {count}</h5>
         
         </>
