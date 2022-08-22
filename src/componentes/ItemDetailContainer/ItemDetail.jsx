@@ -40,7 +40,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, st
                     stock={6} 
                     onAdd={handleAdd}
                      /> 
-                     : <a href="/cart">Ir al carrito</a>
+                     : <Link to="/cart">Ir al carrito</Link>
                      }
                 
 
