@@ -5,12 +5,14 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from './componentes/CartView/CartView';
 import { CartProvider } from './Store/cartContext';
+import firestoreDB from './services/Firebase';
 
 
 function App() {
 
   let userColor = "green";
   const styles = {marginTop:"20px", color: userColor};
+  
 
  
   return (

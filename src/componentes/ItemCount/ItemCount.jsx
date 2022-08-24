@@ -7,7 +7,7 @@ function ItemCount(props){
     const [count, setCount] = useState(props.initial);
 
     function handleIncrementar (){
-        if(count<props.stock){
+        if(count<props.capacidad){
            setCount(count+1) 
         }else{
             alert("Supero el número de huespedes permitidos")

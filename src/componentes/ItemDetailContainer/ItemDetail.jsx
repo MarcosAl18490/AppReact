@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { cartContext } from "../../Store/cartContext";
 
 
-function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, stock} ) {
+function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} ) {
     const {addToCart} = useContext(cartContext);
     const [cantWidget, setCantWidget] = useState(0);
     
@@ -14,7 +14,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, st
 
     function handleAdd(quantity){
         setCantWidget(quantity)
-        const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion, stock};
+        const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion,};
         addToCart(itemToCart, quantity);
     }
 
@@ -37,7 +37,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion, st
                  {cantWidget === 0?
                 <ItemCount 
                     initial={1} 
-                    stock={6} 
+                    capacidad={capacidad} 
                     onAdd={handleAdd}
                      /> 
                      : <Link to="/cart">Ir al carrito</Link>
