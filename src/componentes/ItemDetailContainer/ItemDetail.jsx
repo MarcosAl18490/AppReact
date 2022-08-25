@@ -2,19 +2,20 @@
 import "./ItemDetail.css"
 import  { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount";
-import { useContext, useState } from "react";
-import { cartContext } from "../../Store/cartContext";
+import {  useState } from "react";
+import { useCartContext } from "../../Store/cartContext";
 
 
 function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} ) {
-    const {addToCart} = useContext(cartContext);
+    
     const [cantWidget, setCantWidget] = useState(0);
+    const {addToCart} = useCartContext();
     
    
 
     function handleAdd(quantity){
         setCantWidget(quantity)
-        const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion,};
+        const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion, quantity};
         addToCart(itemToCart, quantity);
     }
 
@@ -29,7 +30,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} )
                     <h2>{id}</h2>
                     <h3>{categoria}</h3>
                     <p> {precio}  </p>
-                    <p>{capacidad}</p>
+                    <p>"Capacidad Maxima: "{capacidad}</p>
                     <h3>{descripcion}</h3>
                     <Link to="/">Volver al inicio</Link>
                 </div>

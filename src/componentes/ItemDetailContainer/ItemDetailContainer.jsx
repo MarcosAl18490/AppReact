@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import ItemList from '../ItemListContainer/ItemList'
 import ItemDetail from './ItemDetail'
 import {useParams} from "react-router-dom"
 import firestoreDB from '../../services/Firebase'
@@ -26,18 +25,7 @@ const [producto, setProducto] = useState({});
 
 const idURL = useParams().id;
 
-// function getHabitacion(){
-//   return new Promise((resolve,reject) => {
-//     let itemRequerido = ItemList.find (elemento => elemento.id == idURL );
 
-//     if(itemRequerido === undefined)
-//       reject("Item no encontrado")
-//     else
-//       resolve(itemRequerido)
-//   });
-// }
-
-  
 useEffect(() => {
      getHabitacionById(idURL)
      .then((respuesta) => setProducto(respuesta))

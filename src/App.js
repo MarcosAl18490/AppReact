@@ -3,9 +3,9 @@ import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Cart from './componentes/CartView/CartView';
-import { CartProvider } from './Store/cartContext';
-import firestoreDB from './services/Firebase';
+import Cart from './componentes/CartView/CartWidget';
+import  {CartProvider}  from './Store/cartContext';
+
 
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
           <p style={styles}>El mejor lugar para sus vacaciones</p>
 
       <Routes>
-        
         <Route path='/' element={<ItemListContainer/>}/>
         
         <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
@@ -32,7 +31,6 @@ function App() {
         <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
 
         <Route path='/cart/:idCart' element={<Cart/>}/>
-
       </Routes>
 
     </CartProvider>

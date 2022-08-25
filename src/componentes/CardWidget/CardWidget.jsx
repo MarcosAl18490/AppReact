@@ -1,8 +1,9 @@
 import "./CardWidget.css"
+import {Link} from "react-router-dom";
 
 function Widget() {
     return (
-      <img className="carrito" src="imagenes/carrito.png" alt="Carrito" />
+      <Link to="/Cart"><img className="carrito" src="imagenes/carrito.png" alt="Carrito" /></Link>
     )
   }
   
