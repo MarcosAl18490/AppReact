@@ -27,7 +27,7 @@ function ItemCount(props){
     
     return(
         <>
-        <h1>Item Counter</h1>
+        
         <button onClick={handleIncrementar}>Agregar</button>
         <button onClick={handleRestar}>Quitar</button>
         <Link to="/Cart"><button onClick={()=> props.onAdd(count)}>Finalizar reservar</button></Link>

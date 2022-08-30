@@ -69,11 +69,11 @@ export default function ItemListContainer(){
           data.map((tipoHabitacion) => <Item 
                                       key={tipoHabitacion.id} 
                                       id={tipoHabitacion.id} 
-                                      categoria={tipoHabitacion.categoria} 
-                                      precio={tipoHabitacion.precio} 
-                                      capacidad={tipoHabitacion.capacidad} 
+                                      categoria={"Categoria: " + tipoHabitacion.categoria} 
+                                      precio={"Valor por dia: " + tipoHabitacion.precio} 
+                                      capacidad={"Capacidad maxima de personas: " + tipoHabitacion.capacidad}
                                       imagen={tipoHabitacion.imagen} 
-                                      descripcion={tipoHabitacion.descripcion}
+                                    
                                       />
           )
         }

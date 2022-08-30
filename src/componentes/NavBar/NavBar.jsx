@@ -15,7 +15,7 @@ function NavBar(){
             <br />
             <Link to="/Categoria/premium">Premium</Link>
             <br />
-            <Link to="/Categoria/plus">Plus</Link>
+            <Link to="/Categoria/super">Super</Link>
             <br />
             
             <Widget/>

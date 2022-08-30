@@ -3,8 +3,9 @@ import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Cart from './componentes/CartView/CartWidget';
+import CartView from './componentes/CartView/CartView';
 import  {CartProvider}  from './Store/cartContext';
+// import {saveProductsFirebase} from  "./services/Firebase.js";
 
 
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <div>
   <BrowserRouter>
+      {/* <button onClick={saveProductsFirebase}>Enviar Datos</button> */}
       <CartProvider>
           <h1 className="titulo">Resort "Altos de Simic"</h1>
           <NavBar/>
@@ -30,7 +32,7 @@ function App() {
 
         <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
 
-        <Route path='/cart/:idCart' element={<Cart/>}/>
+        <Route path='/Cart/:idCart' element={<CartView/>}/>
       </Routes>
 
     </CartProvider>

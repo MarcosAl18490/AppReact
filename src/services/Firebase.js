@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
-
+import {addDoc, collection, getFirestore} from "firebase/firestore";
+import ItemList from "../componentes/ItemListContainer/ItemList";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCQuFCEFg-DPkDjlpTUAjoodGDk8eZ7kSQ",
@@ -14,5 +14,14 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
+
+export async function saveProductsFirebase(){
+        const collectionHabitaciones = collection(firestoreDB, "habitaciones")
+        
+        for(let item of ItemList){
+          const docref = await addDoc(collectionHabitaciones, item);
+          console.log("Documento creado con ID",docref.id)
+        }
+}
 
 export default firestoreDB;
