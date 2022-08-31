@@ -71,7 +71,7 @@ export default function ItemListContainer(){
                                       id={tipoHabitacion.id} 
                                       categoria={"Categoria: " + tipoHabitacion.categoria} 
                                       precio={"Valor por dia: " + tipoHabitacion.precio} 
-                                      capacidad={"Capacidad maxima de personas: " + tipoHabitacion.capacidad}
+                                      capacidad={"Dias maximos disponibles: " + tipoHabitacion.capacidad}
                                       imagen={tipoHabitacion.imagen} 
                                     
                                       />

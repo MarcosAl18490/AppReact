@@ -1,44 +1,3 @@
-// import React, { useContext, useState} from "react";
-
-// const cartContext = React.createContext();
-
-// export const useCartContext = () => useContext(cartContext);
-
-// export function CartProvider  ({children})  {
-//     const [cart, setCart] = useState([]);
-
- // const isInCart = (id) => cart.find(producto => producto.id === id) ? true : false;
-    
-
-
- // function addToCart (item,quantity)  {
-    //     if(isInCart(item.id)){
-    //         setCart(cart.map(producto => {
-    //             return producto.id = item.id ? {...producto, quantity : producto.quantity + quantity} : producto
-    //         }));
-    //     } else {
-    //         setCart([...cart, {...item,quantity}]);
-    //     }
-    // }
-
-    
-
-//     return (
-//         <cartContext.Provider value={{
-//             clearCart,
-//             isInCart,
-//             removeProduct,
-//             addToCart,
-//             totalPrice,
-//             totalProductos,
-//         }}>
-//             {children}
-//         </cartContext.Provider>
-//     )
-// }
-
-
-
 import { createContext, useState} from "react";
 
 
@@ -49,7 +8,11 @@ export function CartProvider  ({children})  {
 
     const clearCart = () => setCart([]);
 
-    const removeProduct = (id) => setCart(cart.filter(producto => producto.id !==id));
+    
+    function removeProducto(id) {
+        let filter = cart.filter((item) => item.id !== id);
+        setCart(filter);
+      }
 
     const totalProductos = () => cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);
 
@@ -80,7 +43,7 @@ export function CartProvider  ({children})  {
 
 
     return (
-        <cartContext.Provider value={{cart, addToCart, clearCart, removeProduct, totalPrice, totalProductos}}>
+        <cartContext.Provider value={{cart, addToCart, clearCart, removeProducto, totalPrice, totalProductos}}>
             {children}
         </cartContext.Provider>
     )

@@ -4,7 +4,15 @@ import CartItem from "./CartItem";
 import "./CartView.css";
 
 function CartView(){
-    const {cart, clearCart} = useContext(cartContext);
+    const {cart, removeProducto} = useContext(cartContext);
+    
+    if (cart.lenght===0){
+        return (
+                <>
+                <h1>carrito vacio</h1>
+                </>
+        )
+    } else{
 
     return (
         <>
@@ -14,9 +22,9 @@ function CartView(){
                 <thead>
                     <tr>
                         <th>Miniatura</th>
-                        <th>Titulo</th>
+                        <th>Categoria</th>
                         <th>Precio</th>
-                        <th>Cantidad</th>
+                        <th>Dias reservados</th>
                         <th>Remover</th>
                         <th>Total</th>
                     </tr>
@@ -29,9 +37,9 @@ function CartView(){
                                 categoria={item.categoria}
                                 precio={item.precio}
                                 total={item.precio * item.quantity}
-                                img={item.img}
+                                imagen={item.imagen}
                                 quantity={item.quantity}
-                                removeItem={() => clearCart(item.id)}
+                                removeItem={() => removeProducto(item.id)}
                                 />
                         );
                     })}
@@ -43,5 +51,5 @@ function CartView(){
         </>
     );
 }
-
+}
 export default CartView;

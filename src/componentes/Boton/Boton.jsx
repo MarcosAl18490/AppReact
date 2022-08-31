@@ -1,9 +1,21 @@
 import "./Boton.css"
 
-function Boton({text}) {
+
+function Boton({ text, type, onTouch, children }) {
+  const btnstyle = {
+    cursor: "pointer",
+    margin: "5px",
+    border: "none",
+    padding: "8px 16px",
+    backgroundColor: type === "alert" ? "#dd2240" : "#0077ee",
+  };
+
   return (
-    <button className="btn1">{text}</button>
-  )
+    <button type={type} onClick={onTouch} style={btnstyle} className="btn">
+      {text || children}
+    </button>
+  );
 }
+
 
 export default Boton

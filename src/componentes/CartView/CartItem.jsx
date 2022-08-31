@@ -1,5 +1,7 @@
-import react from "react";
+
 import Boton from "../Boton/Boton"; 
+
+
 
 function CartItem({imagen,categoria, precio, quantity, total, removeItem}){
     return (
@@ -11,9 +13,12 @@ function CartItem({imagen,categoria, precio, quantity, total, removeItem}){
             <td>${precio}</td>
             <td>{quantity}</td>
             <td>
-                <Boton type="alert" onTouch={removeItem}>X</Boton>
+                <Boton type="alert" onTouch={removeItem}>
+                    Borrar
+                </Boton>
             </td>
             <th>${total}</th>
+            
         </tr>
     );
 }

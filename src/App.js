@@ -32,7 +32,7 @@ function App() {
 
         <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
 
-        <Route path='/Cart/:idCart' element={<CartView/>}/>
+        <Route path='/Cart/' element={<CartView/>}/>
       </Routes>
 
     </CartProvider>

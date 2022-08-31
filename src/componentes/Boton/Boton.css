@@ -1,6 +1,7 @@
-.btn1{
+.btn{
     padding: 5px 10px;
-    background-color: rgba(220, 20, 60, 0.74);
-    border-radius: 5px;
+    color: white;
     max-width: 150px;
-}
+    background-color: rgb(97, 150, 220);
+    border-radius:  5px; 
+  }

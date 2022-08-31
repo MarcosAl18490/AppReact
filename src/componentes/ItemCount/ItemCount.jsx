@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import  { Link } from "react-router-dom"
+
 
 function ItemCount(props){
 
@@ -30,8 +30,8 @@ function ItemCount(props){
         
         <button onClick={handleIncrementar}>Agregar</button>
         <button onClick={handleRestar}>Quitar</button>
-        <Link to="/Cart"><button onClick={()=> props.onAdd(count)}>Finalizar reservar</button></Link>
-        <h5>Cantidad de huespedes: {count}</h5>
+        <button onClick={()=> props.onAdd(count)}>Finalizar reservar</button>
+        <h5>¿Cuantos dias desea alquilar? {count}</h5>
         
         </>
     )
