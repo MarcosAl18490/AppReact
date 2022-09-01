@@ -3,6 +3,7 @@ import { cartContext } from "../../Store/cartContext";
 import CartItem from "./CartItem";
 import "./CartView.css";
 import {Link} from "react-router-dom";
+import UserForm from "../UserForm/UserForm";
 
 function CartView(){
     const {cart, removeProducto} = useContext(cartContext);
@@ -45,10 +46,10 @@ function CartView(){
                 </tbody>
             </table>
         </div>
+        <div></div>
+            <UserForm cart={cart}/>  
         </>
-            
-     )
-    
+     );
    };
 
 export default CartView;

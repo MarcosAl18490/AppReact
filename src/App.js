@@ -33,6 +33,9 @@ function App() {
         <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
 
         <Route path='/Cart/' element={<CartView/>}/>
+
+        <Route path="/gracias" element={<h1>Gracias por su compra</h1>}/>
+
       </Routes>
 
     </CartProvider>

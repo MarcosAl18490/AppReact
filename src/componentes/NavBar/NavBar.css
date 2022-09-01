@@ -1,12 +1,3 @@
-/* .Menu{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border: solid red;
-    padding: 10px;
-    background-color: rgba(69, 235, 235, 0.534);
-} */
 
 .nav-menu{
     display: flex;

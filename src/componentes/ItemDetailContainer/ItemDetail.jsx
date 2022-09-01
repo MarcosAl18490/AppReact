@@ -18,7 +18,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} )
         
         const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion,};
         addToCart(itemToCart,count);
-        setFeedBackMsg("Producto agregado al carrito: " + count + "dias");
+        setFeedBackMsg("Usted eligio reservar por " + count + " dias.");
         setQuantityInCart(count);
     }
 
@@ -26,7 +26,7 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} )
     return(
         <div className="main">
             <div className="item">
-                <small>{feedBackMsg && <p>{feedBackMsg}</p>}</small>
+                
                 <div className="item-img">
                     <img src={imagen} alt="imagen de habitacion doble" />
                 </div>
@@ -45,7 +45,11 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} )
                     capacidad={capacidad} 
                     onAdd={handleAdd}
                      /> 
-                     : <Link to="/cart">Ir al carrito</Link>
+                     : <div> 
+                        <h5>{feedBackMsg && <p>{feedBackMsg}</p>}</h5>
+                        <Link to="/cart">Ir al carrito</Link>
+                        </div>
+                    
                      }
                      <br />
                 <Link to="/">Volver al inicio</Link>
