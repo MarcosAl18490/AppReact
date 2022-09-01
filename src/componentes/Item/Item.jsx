@@ -13,7 +13,7 @@ function Item( {id , categoria, precio, capacidad, imagen, descripcion} ) {
                     <img src={imagen} alt="imagen de habitacion doble" />
                 </div>
                 <div className="item-info">
-                    <h2>{id}</h2>
+                    
                     <h3>{categoria}</h3>
                     <p> {precio}  </p>
                     <p>{capacidad}</p>

@@ -27,10 +27,10 @@ function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} )
                     <img src={imagen} alt="imagen de habitacion doble" />
                 </div>
                 <div className="item-info">
-                    <h2>{id}</h2>
-                    <h3>{categoria}</h3>
-                    <p> Precio por dia:  {precio}  </p>
-                    <h3>{descripcion}</h3>
+                    
+                    <h3>Categoria: {categoria}</h3>
+                    <h3> Precio por dia:  {precio}  </h3>
+                    <p>Caracteristicas: {descripcion}</p>
                     <h5>Dias maximos disponibles: {capacidad}</h5>
                     
                 </div>

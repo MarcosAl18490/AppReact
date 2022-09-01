@@ -14,14 +14,14 @@ export function CartProvider  ({children})  {
         setCart(filter);
       }
 
-    const totalProductos = () => cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);
+    
 
     const totalPrice = () => {
         return cart.reduce ((prev,act) => prev + act.quantity * act.precio,0);
     }
 
     function addToCart(item, count){
-        console.log("ok");
+        
         
         if(isInCart(item.id)){
 
@@ -43,7 +43,7 @@ export function CartProvider  ({children})  {
 
 
     return (
-        <cartContext.Provider value={{cart, addToCart, clearCart, removeProducto, totalPrice, totalProductos}}>
+        <cartContext.Provider value={{cart, addToCart, clearCart, removeProducto, totalPrice, }}>
             {children}
         </cartContext.Provider>
     )
