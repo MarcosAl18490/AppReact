@@ -10,7 +10,7 @@ function ItemCount(props){
         if(count<props.capacidad){
            setCount(count+1) 
         }else{
-            alert("Supero el número de huespedes permitidos")
+            alert("Supero el número de dias permitidos")
         } 
     }
 
@@ -19,7 +19,7 @@ function ItemCount(props){
         if (count>props.initial){
           setCount(count-1)  
         } else{
-            alert("No puede haber menos de un huesped")
+            alert("No puede alquilar menos de un dia")
         }
         
     }

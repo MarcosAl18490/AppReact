@@ -111,7 +111,7 @@ function UserForm ({cart}){
               <Boton type="submit" onTouch={handleSubmit}>
                 Finalizar Compra
               </Boton>
-              <Boton type="reset">Vaciar Carrito</Boton>
+              <Boton type="reset">Borrar</Boton>
             </div>
           </form>
         </div>
