@@ -5,11 +5,9 @@ import {Link} from "react-router-dom";
 function NavBar(){
     return(
         
-        <div>
-            <ul>
+        <div className="nav-bar">
+            <ul className="nav-menu">
             <Link to="/">Principal</Link>
-            <br />
-            <Link to="/Contacto">Contacto</Link>
             <br />
             <Link to="/Categoria/standar">Standar</Link>
             <br />

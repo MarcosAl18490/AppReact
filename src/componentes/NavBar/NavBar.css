@@ -1,4 +1,4 @@
-.Menu{
+/* .Menu{
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -6,4 +6,22 @@
     border: solid red;
     padding: 10px;
     background-color: rgba(69, 235, 235, 0.534);
-}
+} */
+
+.nav-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;  
+    height: 90px;
+    background-color: rgb(18, 119, 23);
+    top: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3em;
+    color:rgb(19, 19, 18)
+  }

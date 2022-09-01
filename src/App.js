@@ -22,9 +22,9 @@ function App() {
       {/* <button onClick={saveProductsFirebase}>Enviar Datos</button> */}
       <CartProvider>
           <h1 className="titulo">Resort "Altos de Simic"</h1>
-          <NavBar/>
           <p style={styles}>El mejor lugar para sus vacaciones</p>
-
+          <NavBar/>
+          
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
         

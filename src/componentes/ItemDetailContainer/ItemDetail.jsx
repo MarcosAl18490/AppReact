@@ -9,20 +9,24 @@ import { cartContext } from "../../Store/cartContext";
 function ItemDetail( {id , categoria, precio, capacidad, imagen, descripcion,} ) {
     const {addToCart} = useContext(cartContext);
     const [quantityInCart, setQuantityInCart] = useState (0);
+    const [feedBackMsg, setFeedBackMsg] = useState(false);
     
     
    
  
-    function handleAdd(quantity){
-        setQuantityInCart(quantity);
+    function handleAdd(count){
+        
         const itemToCart = {id, categoria, precio, capacidad, imagen, descripcion,};
-        addToCart(itemToCart,quantity);
+        addToCart(itemToCart,count);
+        setFeedBackMsg("Producto agregado al carrito: " + count + "dias");
+        setQuantityInCart(count);
     }
 
 
     return(
         <div className="main">
             <div className="item">
+                <small>{feedBackMsg && <p>{feedBackMsg}</p>}</small>
                 <div className="item-img">
                     <img src={imagen} alt="imagen de habitacion doble" />
                 </div>

@@ -20,22 +20,32 @@ export function CartProvider  ({children})  {
         return cart.reduce ((prev,act) => prev + act.quantity * act.precio,0);
     }
 
-    function addToCart(item, count){
+    // function addToCart(item, count){
         
         
-        if(isInCart(item.id)){
+    //     if(isInCart(item.id)){
 
-        }else{
-            let copyCart = [...cart];
-            copyCart.push({...item, quantity: count})
-            setCart(copyCart)
+    //     }else{
+    //         let copyCart = [...cart];
+    //         copyCart.push({...item, quantity: count})
+    //         setCart(copyCart)
+    //     }
+    // }
+
+    // function isInCart(id){
+    //     return(cart.some(itemInCart => itemInCart.id === id))
+    // }
+
+    function addToCart(item, count) {
+        if (cart.some((itemInCart) => itemInCart.id === item.id)) {
+         
+        } else {
+          let copyCart = [...cart];
+          copyCart.push({ ...item, quantity: count });
+          setCart(copyCart);
         }
-    }
-
-    function isInCart(id){
-        return(cart.some(itemInCart => itemInCart.id === id))
-    }
-
+      }
+    
 
    
     console.log("carrito", cart,);
