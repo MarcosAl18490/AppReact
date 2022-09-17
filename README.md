@@ -21,32 +21,27 @@ React
 NodeJS
 <br>
 
-## Learn More
+## Configuracion:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- npm install i para instalar todas las dependencias
+- npm install start para renderizar el proyecto en un host local.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencias usadas en el proyecto:
 
-### Code Splitting
+- "firebase": "^9.9.3"
+- "react": "^18.2.0"
+- "react-dom": "^18.2.0"
+- "react-router-dom": "^6.3.0"
+- "react-scripts": "5.0.1"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Mejoras a realizar en futuras versiones:
 
-### Analyzing the Bundle Size
+- Modificar la cantidad de dias elegidos sin necesidad de borrar el item del carrito.
+- Crear un apartado de contaco y comunicacion con la empresa prestadora del servicio de hoteleria.
+- Mejorar el apartado visual y estetico de la misma.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contacto
 
-### Making a Progressive Web App
+- GitHub: https://github.com/MarcosAl18490
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Linkedin : https://www.linkedin.com/in/marcosalonso18490/
